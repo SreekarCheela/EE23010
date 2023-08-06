@@ -112,11 +112,14 @@ Question 1.5.7
 %\tableofcontents
 
 % Within an equation environment
-
-\large The vertices of the given triangle are:
+\begin{flushleft}
+	\large Q) Draw a circle with its centre as I (incentre) and radius r (inradius)
+	\bigskip
+	\large The vertices of the given triangle are:
+\end{flushleft}
 \\
 \begin{align}
-	A=\myvec{1\\-1}; B=\myvec{-4\\6}; C=\myvec{-3\\-5}	
+	vec {A}= &\myvec{1\\-1};\\ vec {B}= &\myvec{-4\\6};\\ vec {C}= &\myvec{-3\\-5}	
 \end{align}
 \\
 Suppose the equations AB, BC and CA are respectively given by
@@ -195,17 +198,18 @@ Where P and Q are given as:
 	1.81 & 0.67 & -3.21\\
 	1.7& -0.62 & -2.03
 \end{array}
-	\right)\\
-R_{2} \leftarrow R_{1} - \frac{1.81}{1.7} R_{2}
+	\right)
+\xleftrightarrow[]{R_2 \leftarrow R_{1} - \frac{1.81}{1.7} R_{2}}
 \end{align*}
+
 \begin{align*}
 \left(
 	\begin{array}{rr|r}
 		1.81 & 0.67 & -3.21\\
 		0& 1.33 & -1.05
 	\end{array}
-		\right)\\
-R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
+		\right)
+\xleftrightarrow[]{R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}}
 \end{align*}
 
 \begin{align*}
@@ -214,8 +218,8 @@ R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
 			1.81 & 0 & -2.68\\
 			0& 1.33 & -1.05
 		\end{array}
-	\right)\\
-	R_{1} \leftarrow \frac{1}{1.81} R_{1} 
+	\right)
+	\xleftrightarrow[]{R_{1} \leftarrow \frac{1}{1.81} R_{1} }
 \end{align*}
 
 \begin{align*}
@@ -224,8 +228,8 @@ R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
 			1 & 0 & -1.48\\
 			0& 1.33 & -1.05
 		\end{array}
-	\right)\\
-	R_{1} \leftarrow \frac{1}{1.33} R_{1} 
+	\right)
+	\xleftrightarrow[]{R_{1} \leftarrow \frac{1}{1.33} R_{1} }
 \end{align*}
 
 \begin{align*}
@@ -234,7 +238,7 @@ R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
 			1 & 0 & -1.48\\
 			0& 1 & -0.79
 		\end{array}
-	\right)\\
+	\right)
 \end{align*}
 
 \begin{flushleft}
@@ -242,7 +246,7 @@ R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
 \end{flushleft}
 
 \begin{align}
-	\text{I=}&\myvec{
+	\text{vec{I}=}&\myvec{
 		-1.48 \\
 		-0.79
 	}
@@ -273,7 +277,7 @@ R_{1} \leftarrow R_{1} - \frac{0.67}{1.33} R_{2}
     \\
 \end{flushleft}
 
-\begin{figure}[]
+\begin{figure}[h]
 	\centering
 	\includegraphics[width=\columnwidth]{./Diagram.png}
 	\caption{Triangle with the incircle generated using python}
