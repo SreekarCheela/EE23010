@@ -32,9 +32,11 @@ plt.plot(x_CA[0,:],x_CA[1,:],label='$CA$')
 plt.plot(x_icirc[0,:],x_icirc[1,:],label='$incircle$')
 
 #labelling the coordinates
-tri_coords = np.vstack((A,B,C,I)).T
+tri_coords = np.block([[A],[B],[C],[I]]).T
+tri_coords = tri_coords.reshape(2, -1)
 plt.scatter(tri_coords[0,:], tri_coords[1,:])
 vert_labels = ['A','B','C','I']
+
 for i, txt in enumerate(vert_labels):
     plt.annotate(txt, # this is the text
                  (tri_coords[0,i], tri_coords[1,i]), # this is the point to label
